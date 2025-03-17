@@ -1,1 +1,102 @@
+<!DOCTYPE html>
 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="RomanNumeralConverter.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+      <div class="container"> 
+        <div class="header">
+          <h1> ROMAN NUMERAL CONVERTER</h1>
+        </div>
+        
+        <div class="sections-container">
+          <section class="one flex-center">
+            <div class="input-container flex-center border-rad5">
+              <h3>Type the number you want to convert: </h3>
+              <input type="number" id="number"/>
+              <button type="submit" id="convert-btn">CONVERT</button>
+              <div id="output" class="output flex-center border-rad5"></div>
+            </div>
+          </section>
+
+          <!-- MAKE GRID -->
+          <section class="two flex-center">
+            <div class="table-container flex-center border-rad5">
+              <h3>ROMAN NUMERAL VALUES TABLE</h3>
+            <table>
+              <tr>
+                <th>Roman Numerals</th>
+                <th>Arabic Numerals</th>
+              </tr>
+              <tr>
+                <td>M</td>
+                <td>1000</td>
+              </tr>
+              <tr>
+                <td>CM</td>
+                <td>900</td>
+              </tr>
+              <tr>
+                <td>D</td>
+                <td>500</td>
+              </tr>
+              <tr>
+                <td>CD</td>
+                <td>400</td>
+              </tr>
+              <tr>
+                <td>C</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>XC</td>
+                <td>90</td>
+              </tr>
+              <tr>
+                <td>L</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>XL</td>
+                <td>40</td>
+              </tr>
+              <tr>
+                <td>X</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>IX</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>V</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>IV</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>I</td>
+                <td>1</td>
+              </tr>
+            </table>
+            </div>
+          </section>
+        </div>
+      </div>
+
+        <script src="RomanNumeralConverter.js" async defer></script>
+    </body>
+
+</html>
