@@ -1,1 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Oswald;
+}
 
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+#container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  margin: auto;
+  flex-direction: column;
+  background-color: lightgray;
+}
+
+#header{
+  flex: 1;
+  border: 1px solid black;
+  width: 100%;
+  justify-content: flex-start!important;
+
+  background-color: rgb(40,36,44);
+  color: white;
+  font-size: 2em;
+}
+
+#header img {
+  height: 15vh;
+}
+
+#user-input-group{
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  padding: 1em 0;
+}
+
+#results-div{
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  
+  padding: 2em;
+  text-align: center;
+  font-size: 2em;
+}
+
+#user-input-group #user-input{
+  width: 50%;
+  height: 2em;
+  font-size: 2em;
+  padding-left: 1em;
+
+  text-align: center;
+  border-radius: 10px;
+}
+
+#user-input-label{
+  font-size: 2em;
+}
+
+#user-input::placeholder{
+  text-align: center;
+}
+
+#button-group{
+  flex: 1;
+  width: 100%;
+
+  padding: 1em 0;
+  display: flex;
+  gap: 2em;
+}
+
+#button-group button{
+  width: 5em;
+  height: 2em;
+  font-size: 2em;
+  border-radius: 10px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green{
+  color: lightgreen;
+}
+
+.red{
+  color: red;
+}
