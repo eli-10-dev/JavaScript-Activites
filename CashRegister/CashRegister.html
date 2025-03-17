@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="CashRegister.css">
+    </head>
+    <body>
+      <div id="container" class="flex-center">
+        <div id="outer-border" class="flex-center">
+          <div id="inner-border">
+            <div id="content-border">
+              <div id="transaction-display">
+                <div id="price">
+                  Price:
+                </div>
+                
+                <section id="input-cash-container">
+                  <label for="cash" id="cash-input-label">Cash payment</label>
+                  <input id="cash"/>
+                  <button id="purchase-btn">Purchase</button>
+                </section>
 
+                <div id="change-due">
+                </div>
+              </div>
+
+              <div id="cashier-contents">
+                <div id="numpad">
+                  <div id="num" class="num" value="1">1</div>
+                  <div id="num" class="num" value="2">2</div>
+                  <div id="num" class="num" value="3">3</div>
+                  <div id="num" class="num" value="4">4</div>
+                  <div id="num" class="num" value="5">5</div>
+                  <div id="num" class="num" value="6">6</div>
+                  <div id="num" class="num" value="7">7</div>
+                  <div id="num" class="num" value="8">8</div>
+                  <div id="num" class="num" value="9">9</div>
+                  <div id="num" class="num" value=".">.</div>
+                  <div id="num" class="num zero" value="0">0</div>
+                  <div id="num" class="num" value="Del">Del</div>
+                </div>
+
+                <div id="cash-contents"></div>
+              </div>
+            </div>
+          </div> <!-- End of inner-border -->
+        </div>
+      </div> <!-- End of container div -->
+        <script src="CashRegister.js" async defer></script>
+    </body>
+</html>
