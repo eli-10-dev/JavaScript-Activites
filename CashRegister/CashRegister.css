@@ -124,6 +124,11 @@ body{
   color: black;
 }
 
+.num:active{
+  background-color: black;
+  color: white;
+}
+
 #cash-contents {
   margin-top: 2em;
   grid-column: 2 / 3; 
