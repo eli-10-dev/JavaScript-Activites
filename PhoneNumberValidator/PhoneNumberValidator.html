@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="PhoneNumberValidator.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Emblema+One&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    </head>
 
+  <body>
+    <div id="container" class="flex-center">
+      <div id="header" class="flex-center">
+        <img src="https://www.freeiconspng.com/thumbs/mobile-icon-png/device-mobile-phone-icon--small--flat-iconset--paomedia-8.png">
+        US PHONE NUMBER VALIDATOR
+      </div>
+
+        <div id="results-div" class="flex-center"></div>
+
+        <div id="user-input-group" class="flex-center">
+          <label for="user-input" id="user-input-label">Enter a Telephone number</label>
+          <input type="text" id="user-input" placeholder="1 555-555-5555"/>
+        </div>
+
+        <div id="button-group" class="flex-center">
+          <button id="check-btn">Check</button>
+          <button id="clear-btn">Clear</button>
+        </div>
+    </div>
+
+    <script src="PhoneNumberValidator.js" defer></script>
+  </body>
+</html>
