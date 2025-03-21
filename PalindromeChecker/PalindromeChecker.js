@@ -3,8 +3,6 @@ const textInput = document.getElementById("text-input");
 const checkButton = document.getElementById("check-btn");
 const result = document.getElementById("result");
 
-// #check-btn should check if there is an input, if thre is none "Please input a value"
-
 const cleanInputString = (str) =>{
   const regex = /[_.(),:\-\ /\ \\ \s]/g;
   return str.replace(regex, '');
@@ -23,9 +21,19 @@ const checkPalindrome = () =>{
     console.log(reversedCleanInput);
     
     if (cleanInput === reversedCleanInput){
-      result.innerHTML = `${userInput} is a palindrome`;
+      result.innerHTML = `
+      <div class="palindrome">
+        ${userInput} = ${reversedCleanInput} <br>
+        ${userInput} is a palindrome
+      </div>
+      `;
     } else{
-      result.innerHTML = `${userInput} is not a palindrome`;
+      result.innerHTML = `
+      <div class="not-palindrome">
+        ${userInput} ≠ ${reversedCleanInput} <br>
+        ${userInput} is not a palindrome
+      </div>
+      `;
     }
   }
 }
