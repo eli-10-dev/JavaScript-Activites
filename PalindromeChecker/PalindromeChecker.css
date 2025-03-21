@@ -32,10 +32,15 @@ img{
   height: auto;
   border-radius: 5px;
   margin: 1em;
+  margin: auto;
 }
 
 img:hover{
   opacity: 0.7;
+}
+
+.container.zero{
+  text-align: justify;
 }
 
 .container{
@@ -112,6 +117,13 @@ button:hover{
 
 .not-palindrome{
   color: red;
+}
+
+
+@media screen and (max-width: 1010px){
+  .header, .container.zero{
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 730px){
