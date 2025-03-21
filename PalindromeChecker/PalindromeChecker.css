@@ -118,7 +118,7 @@ button:hover{
 }
 
 @media screen and (max-width: 1010px){
-  .header{
+  .header, .container.zero{
     text-align: center;
   }
 }
