@@ -44,11 +44,11 @@ body{
 }
 
 #results-div{
-  flex: 1;
+  flex: 0.1;
   flex-direction: column;
   width: 100%;
   
-  padding: 2em;
+  padding-top: 1em;
   text-align: center;
   font-size: 2em;
 }
@@ -76,7 +76,6 @@ body{
   width: 100%;
 
   padding: 1em 0;
-  display: flex;
   gap: 2em;
 }
 
@@ -103,4 +102,26 @@ button:hover{
 
 .red{
   color: red;
+}
+
+@media screen and (max-width: 700px){
+  #user-input{
+    min-width: 350px;
+  }
+}
+
+@media screen and (max-width: 435px){
+  #header{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px){
+  #user-input{
+    min-width: 95%;
+  }
+  
+  button{
+    width: 95%;
+  }
 }
