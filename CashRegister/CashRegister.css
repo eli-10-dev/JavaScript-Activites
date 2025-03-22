@@ -20,7 +20,6 @@ body{
   margin: auto;
   height: 100%;
   width: 100%;
-
   background-color: rgba(155,150,129,255);
   display: flex;
   flex-direction: column;
@@ -30,7 +29,6 @@ body{
   border: 1px solid black;
   width: 93%;
   height: 93%;
-
   background-color: rgb(194,189,154);
 }
 
@@ -43,7 +41,6 @@ body{
   width: 100%;
   height: 100%;
   border: 1px solid black;
-
   padding: 2em;
   background: linear-gradient(
     90deg,
@@ -53,23 +50,31 @@ body{
 }
 
 #transaction-display{
+  border: 1px solid white;
   background-color: black;
+  margin-top: 1em;
   padding: 1em 1em 1em 4em;
-
   flex: 0.5;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   color:green;
 
   position: relative;
   bottom: 5%;
 }
 
+#price-cash-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#price-input-label{
+  padding-right: 3.6em;
+}
+
 #input-cash-container, #price{
-  border: 1px solid white;
   flex: 0.5;
   display: flex;
-
   gap: 1em;
   padding: 1em 0;
   font-size: 2em;
@@ -91,40 +96,38 @@ body{
 
 #price, #change-due{
   flex: 0.5;
-  
   display: flex;
   font-size: 2em;
 }
 
-#cashier-contents{
-  /* border: 1px solid black; */
-  height: 75%;
+#change-display-section{
+  flex: 1;
+  display: grid;
+  place-content: center;
+}
 
+#cashier-contents{
+  height: 75%;
   flex: 1;  
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
-   
   place-items: center; 
 }
 
 #numpad{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   width: 75%;
   height: 75%;
-
   position: relative;
   bottom: 10%;
 }
 
 .num{
   border: 1px solid black;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: lightgray;
   color: black;
 }
@@ -138,7 +141,6 @@ body{
   margin-top: 2em;
   grid-column: 2 / 3; 
   height: 100%;
-
   text-align: left; 
   place-content: flex-start;
 }
