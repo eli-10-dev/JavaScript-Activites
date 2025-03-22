@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pokemon App</title>
+        <meta name="author" content="Elijah Gaylan @2025">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="PokemonApp.css">
+    </head>
+
+    <body>
+      <div class="container flex">
+
+        <div class="left-container flex">
+
+          <section class="input-section flex-center">
+            <label for="search-input">Search Pokemon!</label>
+            <input required id="search-input"/>
+            <button id="search-button">Search</button>
+          </section>
+
+          <div id="pokemon-display" class="flex-center">POKEMON DISPLAY</div>
+
+          <section class="pokemon-info flex">
+            <div id="pokemon-name" class="flex-center"></div>
+            <div id="pokemon-id" class="flex-center"></div>
+          </section>
+
+        </div>
+
+        <div class="right-container flex-center">
+
+          <section class="pokemon-stats">
+            <div class="stats-label">Weight</div>
+            <div class="stats-value" id="weight"></div>
+
+            <div class="stats-label">Height</div>
+            <div class="stats-value" id="height"></div>
+
+            <div class="stats-label">Type</div>
+            <div class="stats-value" id="types"></div>
+
+            <div class="stats-label">HP</div>
+            <div class="stats-value" id="hp"></div>
+
+            <div class="stats-label">ATK</div>
+            <div class="stats-value" id="attack"></div>
+
+            <div class="stats-label">DEF</div>
+            <div class="stats-value" id="defense"></div>
+
+            <div class="stats-label">SP ATK</div>
+            <div class="stats-value" id="special-attack"></div>
+
+            <div class="stats-label">SP DEF</div>
+            <div class="stats-value" id="special-defense"></div>
+
+            <div class="stats-label">SPEED</div>
+            <div class="stats-value" id="speed"></div>
+          </section>
+        </div>
+
+      </div>
+        <script src="PokemonApp.js" async defer></script>
+    </body>
+</html>
