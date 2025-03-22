@@ -1,5 +1,6 @@
 // INPUT
 const cash = document.getElementById("cash");
+const priceInput = document.getElementById("price-input");
 
 // BUTTON
 const purchaseBtn = document.getElementById("purchase-btn");
@@ -12,7 +13,6 @@ const priceDisplay = document.getElementById("price");
 const cashInDrawerDisplay = document.getElementById("cash-contents");
 const statusDisplay = document.getElementById("status-display");
  
-
 let cid = [
   ["PENNY", 0.50],  
   ["NICKEL", 0.50],  
@@ -40,9 +40,8 @@ let unitValues = {
   'ONE HUNDRED': 100.00
 };
 
-
-let price = 19.5;
-priceDisplay.textContent = `Price: ${price}`;
+let price = priceInput.value;
+// priceDisplay.textContent = `Price: ${price}`;
 
 let currentTotalCashInDrawer = cid.reduce((sum, money) => sum + money[1], 0);
 currentTotalCashInDrawer = Math.round(currentTotalCashInDrawer * 100) / 100;
@@ -132,19 +131,27 @@ const reset = () => {
 }
 
 purchaseBtn.addEventListener("click", () => {
+  price = priceInput.value;
   getChange(cash.value);
 }); 
 
+let activeInput = cash;
+
+document.querySelectorAll("input").forEach((input) => {
+  input.addEventListener("focus", () => {
+    activeInput = input;
+  });
+});
+
 numpadBtns.forEach((div) => {
   div.addEventListener("click", () => {
+    if (!activeInput) activeInput = cash; // Default to cash input if none is selected
 
     if (div.getAttribute("value") === "Del") {
-      const cashArray = cash.value.split("");
-      cashArray.pop(); 
-      // console.log(cashArray);
-      cash.value = cashArray.join("");
+      activeInput.value = activeInput.value.slice(0, -1); // Remove last character
       return;
     }
-    cash.value += div.getAttribute("value");
+    
+    activeInput.value += div.getAttribute("value"); // Append clicked number
   });
 });
