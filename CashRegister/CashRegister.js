@@ -12,7 +12,7 @@ const changeDueDisplay = document.getElementById("change-due");
 const priceDisplay = document.getElementById("price");
 const cashInDrawerDisplay = document.getElementById("cash-contents");
 const statusDisplay = document.getElementById("status-display");
- 
+
 let cid = [
   ["PENNY", 0.50],  
   ["NICKEL", 0.50],  
@@ -41,7 +41,6 @@ let unitValues = {
 };
 
 let price = priceInput.value;
-// priceDisplay.textContent = `Price: ${price}`;
 
 let currentTotalCashInDrawer = cid.reduce((sum, money) => sum + money[1], 0);
 currentTotalCashInDrawer = Math.round(currentTotalCashInDrawer * 100) / 100;
@@ -131,7 +130,6 @@ const reset = () => {
 }
 
 purchaseBtn.addEventListener("click", () => {
-  price = priceInput.value;
   getChange(cash.value);
 }); 
 
