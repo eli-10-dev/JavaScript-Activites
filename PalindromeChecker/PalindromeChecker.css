@@ -117,6 +117,13 @@ button:hover{
   color: red;
 }
 
+@media screen and (max-width: 1500px){
+  .container{
+    max-width: 90%;
+    height: auto
+  }
+}
+
 @media screen and (max-width: 1010px){
   .header, .container.zero{
     text-align: center;
