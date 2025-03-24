@@ -53,7 +53,7 @@ const displayPokemon = (matchPokemon) => {
   .then((res) => res.json())
   .then((data) => {
     // console.log(data);
-    pokemonDisplay.innerHTML += `<img src="${data.sprites.front_default}" id="sprite">`;
+    pokemonDisplay.innerHTML = `<img src="${data.sprites.front_default}" id="sprite">`;
     pokemonName.innerHTML = matchPokemon.name;
     pokemonId.innerHTML = matchPokemon.id;
 
