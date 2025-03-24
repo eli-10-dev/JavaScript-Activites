@@ -7,27 +7,29 @@
       <meta name="author" content="Elijah Gaylan @2025">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="PokemonApp.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   </head>
 
     <body>
       <div class="container flex">
-        <div class="left-container flex">
-          <div class="pokemon-card-border flex-center">
-
-            <div id="pokemon-display" class="flex-center"></div>
+        <div class="left-container flex-center">
+          <div id="pokemon-display" class="flex-center"></div>
  
-            <section class="pokemon-info flex">
-              <div id="pokemon-name" class="flex-center"></div>
-              <div id="pokemon-id" class="flex-center"></div>
-            </section>
-          </div>
+          <section class="pokemon-info flex">
+            <div id="pokemon-name" class="flex-center"></div>
+            <div id="pokemon-id" class="flex-center"></div>
+           </section>
         </div>
 
         <div class="right-container flex-center">
           <section class="input-section flex-center">
-            <label for="search-input">Search Pokemon!</label>
-            <input required id="search-input"/>
-            <button id="search-button">Search</button>
+            <label for="search-input" class="search-input-label flex-center"><h1>SEARCH POKEMON!</h1></label>
+            <section class="input-and-button flex-center">
+              <input required id="search-input"/>
+              <button id="search-button">Search</button>
+            </section>
           </section>
 
           <section class="pokemon-stats">

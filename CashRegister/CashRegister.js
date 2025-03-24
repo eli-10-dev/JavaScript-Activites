@@ -143,13 +143,13 @@ document.querySelectorAll("input").forEach((input) => {
 
 numpadBtns.forEach((div) => {
   div.addEventListener("click", () => {
-    if (!activeInput) activeInput = cash; // Default to cash input if none is selected
+    if (!activeInput) activeInput = cash;
 
     if (div.getAttribute("value") === "Del") {
-      activeInput.value = activeInput.value.slice(0, -1); // Remove last character
+      activeInput.value = activeInput.value.slice(0, -1);
       return;
     }
     
-    activeInput.value += div.getAttribute("value"); // Append clicked number
+    activeInput.value += div.getAttribute("value");
   });
 });

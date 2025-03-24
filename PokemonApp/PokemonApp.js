@@ -47,8 +47,6 @@ const searchPokemon = () => {
 };
 
 const displayPokemon = (matchPokemon) => {
-  reset();
-
   fetch(matchPokemon.url)
   .then((res) => res.json())
   .then((data) => {
@@ -66,28 +64,25 @@ const displayPokemon = (matchPokemon) => {
     specialDefense.innerHTML = data.stats[4].base_stat;
     speed.innerHTML =  data.stats[5].base_stat;
 
+    type.innerHTML = "";
+
+
     for (let i = 0; i <= data.types.length - 1; i++){
       // console.log(data.types[i].type.name);
-      type.innerHTML += `<p id="pokemonType">${data.types[i].type.name}</p> `;
+      type.innerHTML += `<p id="pokemonType">${data.types[i].type.name}</p>`;
     }
-    
   })
   .catch((error) => console.error("Fetch Error:", error));
-};
-
-const reset = () => {
-  weight.innerHTML = "";
-  height.innerHTML = "";
-  type.innerHTML = "";
-  hp.innerHTML = "";
-  attack.innerHTML = "";
-  defense.innerHTML = "";
-  specialAttack.innerHTML = "";
-  specialDefense.innerHTML = "";
-  speed.innerHTML = "";
 };
 
 searchBtn.addEventListener("click", () => {
   const currentPokemon = searchPokemon();
   displayPokemon(currentPokemon);
 });
+
+searchBar.addEventListener("keypress", (event => {
+  if (event.key === "Enter"){
+    event.preventDefault();
+    searchBtn.click();
+  }
+}));
