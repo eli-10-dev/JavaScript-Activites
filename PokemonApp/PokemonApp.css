@@ -8,61 +8,75 @@ body{
   width: 100%!important;
   min-height: 100vh;
   display: flex;
+  background: linear-gradient(
+    115deg,
+    red 30%,
+    rgb(248,244,244) 20%
+  );
 }
 
 .container{
-  /* box-shadow: 0px 0px 9px 1px; */
   width: 95%;
-  min-height: 90vh;
+  height: 90vh;
+  max-height: 90vh;
   margin: auto;
-
   border-radius: 5px;
+  background: url(https://www.nicepng.com/png/detail/312-3124036_pixel-pokeball-quick-ball-pokemon-pixel.png);
+  background-repeat: no-repeat;
+  background-size: 90% ;
+  background-position: 300%;
 }
 
 /* LEFT SIDE */
 .left-container{
   flex: 1;
-  flex-direction: column;
-
   box-shadow: 0px 0px 15px 4px;
+  background-color: yellow;
   border-radius: 10px;
 }
 
-.description{
-  background-color: lightblue;
-  flex: 1;
-  width: 100%;
+.pokemon-card-border{
+  width: 95%;
+  height: 95%;
+  max-height: 95%;
+  background: linear-gradient(
+    0deg,
+    white, 
+    gray);
+  flex-direction: column;
+  margin: auto;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
 }
 
-.input-section{
-  border: 1px solid gray;
-  flex: 0.5;
-  width: 100%;
-  background-color: orange;
-
-  border-radius: 5px 5px 0px 0px;
-}
-
-#pokemon-display{
+#pokemon-display {
   flex: 5;
-  background-color: gray;
+  background: url(https://www.serebii.net/pokemonmasters/syncpairs/backgrounds/th/professoroak.jpg);
+  background-size: cover;
+  border: 2px solid black;
+  height: 95%;
   width: 100%;
 }
-
+ 
 #sprite{
-  width: 50%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
 
 .pokemon-info{
-  background-color: lightblue;
   flex: 0.7;
-  border-radius: 0 0 5px 5px
-
+  width: 100%;
+  border: 1px solid black;
+  background-color: gray;
+  border-radius: 0 0 5px 5px;
 }
 
 #pokemon-name, #pokemon-id{
   flex: 1;
+  border: 1px solid black;
   font-size: 2em;
 }
 
@@ -72,14 +86,22 @@ body{
   flex-direction: column;
 }
 
-.pokemon-stats{
-  flex: 0.5;
+.input-section{
+  flex: 0.1;
   width: 50%;
+  margin-bottom: auto;
+  border-radius: 5px 5px 0px 0px;
+  z-index: 3;
+}
 
+.pokemon-stats{
+  flex: 0.6;
+  width: 50%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(9, 1fr);
   gap: 0.2em;
+  margin-bottom: auto;
 } 
 
 .stats-label, .stats-value{
@@ -89,6 +111,7 @@ body{
   align-items: center;
   gap: 0.5em;
   border-radius: 5px;
+  opacity: 0.96;
 }
 
  /* SET COLOR */
@@ -103,10 +126,9 @@ body{
 
 #pokemonType{
   border: 1px solid black;
-  background-color: gray;
+  /* background-color: gray; */
   height: 1.5em;
   width: auto;
-  
   padding: 3px;
   border-radius: 5px;
 }

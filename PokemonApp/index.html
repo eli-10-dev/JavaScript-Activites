@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Pokemon App</title>
-        <meta name="author" content="Elijah Gaylan @2025">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="PokemonApp.css">
-    </head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Pokemon App</title>
+      <meta name="author" content="Elijah Gaylan @2025">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="PokemonApp.css">
+  </head>
 
     <body>
       <div class="container flex">
-
         <div class="left-container flex">
+          <div class="pokemon-card-border flex-center">
 
+            <div id="pokemon-display" class="flex-center"></div>
+ 
+            <section class="pokemon-info flex">
+              <div id="pokemon-name" class="flex-center"></div>
+              <div id="pokemon-id" class="flex-center"></div>
+            </section>
+          </div>
+        </div>
+
+        <div class="right-container flex-center">
           <section class="input-section flex-center">
             <label for="search-input">Search Pokemon!</label>
             <input required id="search-input"/>
             <button id="search-button">Search</button>
           </section>
-
-          <div id="pokemon-display" class="flex-center">POKEMON DISPLAY</div>
-
-          <section class="pokemon-info flex">
-            <div id="pokemon-name" class="flex-center"></div>
-            <div id="pokemon-id" class="flex-center"></div>
-          </section>
-
-        </div>
-
-        <div class="right-container flex-center">
 
           <section class="pokemon-stats">
             <div class="stats-label">Weight</div>

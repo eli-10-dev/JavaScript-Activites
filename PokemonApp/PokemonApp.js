@@ -25,7 +25,7 @@ fetch("https://pokeapi-proxy.freecodecamp.rocks/api/pokemon")
   })
   .then((pokemonData) => {
       pokemonArr.push(...pokemonData.results);
-      // console.log(pokemonArr);
+      console.log(pokemonArr);
 
       pokemonArr.forEach(pokemon => {
         pokemonMap.set(pokemon.id.toString(), pokemon);
@@ -52,8 +52,8 @@ const displayPokemon = (matchPokemon) => {
   fetch(matchPokemon.url)
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
-    pokemonDisplay.innerHTML = `<img src="${data.sprites.front_default}" id="sprite">`;
+    // console.log(data);
+    pokemonDisplay.innerHTML += `<img src="${data.sprites.front_default}" id="sprite">`;
     pokemonName.innerHTML = matchPokemon.name;
     pokemonId.innerHTML = matchPokemon.id;
 
@@ -67,9 +67,10 @@ const displayPokemon = (matchPokemon) => {
     speed.innerHTML =  data.stats[5].base_stat;
 
     for (let i = 0; i <= data.types.length - 1; i++){
+      // console.log(data.types[i].type.name);
       type.innerHTML += `<p id="pokemonType">${data.types[i].type.name}</p> `;
     }
-
+    
   })
   .catch((error) => console.error("Fetch Error:", error));
 };
